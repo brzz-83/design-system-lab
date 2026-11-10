@@ -1,7 +1,13 @@
 import type { ButtonHTMLAttributes } from 'react';
 import './button.css';
 
-export type ButtonVariant = 'primary' | 'secondary';
+export type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'danger'
+  | 'warning'
+  | 'success';
+  
 export type ButtonSize = 's' | 'm' | 'l';
 
 // Props — свойства экземпляра, как Type и Size в Figma.

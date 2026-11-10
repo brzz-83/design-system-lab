@@ -24,9 +24,6 @@ export function App() {
             <Button variant={variant} size={size} disabled={disabled} onClick={() => setClicks(n => n + 1)}>
               {label || 'Кнопка'}
             </Button>
-            <Button variant="secondary" size="m"
-            onClick={() => setClicks(0)}> Отмена
-            </Button>
                                                 
 
           </div>
@@ -37,7 +34,11 @@ export function App() {
           <h2>Свойства экземпляра</h2>
           <label>Текст кнопки<input value={label} onChange={e => setLabel(e.target.value)} maxLength={60} /></label>
           <label>Type → variant<select value={variant} onChange={e => setVariant(e.target.value as ButtonVariant)}>
-            <option value="primary">Primary</option><option value="secondary">Secondary</option>
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="danger">Danger</option>
+            <option value="warning">Warning</option>
+            <option value="success">Success</option>
           </select></label>
           <label>Size → size<select value={size} onChange={e => setSize(e.target.value as ButtonSize)}>
             <option value="s">S — 32 px</option><option value="m">M — 40 px</option><option value="l">L — 48 px</option>

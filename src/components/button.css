@@ -35,3 +35,26 @@
 .button:focus-visible { outline: 2px solid var(--color-action-primary-default); outline-offset: 3px; }
 .button:disabled { background: var(--color-surface-disabled); color: var(--color-text-disabled); cursor: not-allowed; }
 @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+.button[data-variant='danger'] {
+  --button-bg: var(--color-action-danger-default);
+  --button-hover: var(--color-action-danger-hover);
+  --button-active: var(--color-action-danger-active);
+  --button-text: var(--color-text-on-danger);
+  --button-active-text: var(--color-text-on-danger-active);
+}
+
+.button[data-variant='warning'] {
+  --button-bg: var(--color-action-warning-default);
+  --button-hover: var(--color-action-warning-hover);
+  --button-active: var(--color-action-warning-active);
+  --button-text: var(--color-text-on-warning);
+  --button-active-text: var(--color-text-on-warning-active);
+}
+
+.button[data-variant='success'] {
+  --button-bg: var(--color-action-success-default);
+  --button-hover: var(--color-action-success-hover);
+  --button-active: var(--color-action-success-active);
+  --button-text: var(--color-text-on-success);
+  --button-active-text: var(--color-text-on-success-active);
+}
