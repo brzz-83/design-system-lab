@@ -1,0 +1,37 @@
+/* Компонент использует семантические токены, а не HEX-значения. */
+.button {
+  --button-bg: var(--color-action-primary-default);
+  --button-hover: var(--color-action-primary-hover);
+  --button-active: var(--color-action-primary-active);
+  --button-text: var(--color-text-on-color);
+  --button-active-text: var(--button-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-8);
+  min-width: 144px;
+  height: var(--size-40);
+  padding: 0 var(--size-24);
+  border: 0;
+  border-radius: var(--size-8);
+  background: var(--button-bg);
+  color: var(--button-text);
+  font: var(--font-weight-button) 16px/24px var(--font-family-body);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.button[data-variant='secondary'] {
+  --button-bg: var(--color-action-secondary-default);
+  --button-hover: var(--color-action-secondary-hover);
+  --button-active: var(--color-action-secondary-active);
+  --button-text: var(--color-text-on-secondary);
+  --button-active-text: var(--color-text-on-secondary-active);
+}
+.button[data-size='s'] { height: var(--size-32); padding-inline: var(--size-16); font-size: 14px; }
+.button[data-size='l'] { height: var(--size-48); padding-inline: var(--size-32); }
+.button:hover:not(:disabled) { background: var(--button-hover); }
+.button:active:not(:disabled) { background: var(--button-active); color: var(--button-active-text); }
+.button:focus-visible { outline: 2px solid var(--color-action-primary-default); outline-offset: 3px; }
+.button:disabled { background: var(--color-surface-disabled); color: var(--color-text-disabled); cursor: not-allowed; }
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }
